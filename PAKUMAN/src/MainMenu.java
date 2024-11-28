@@ -49,7 +49,7 @@ public class MainMenu extends JFrame {
 		contentPane.setLayout(null);
 		setLocationRelativeTo(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
+		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				Pacman pac = new Pacman(); 
@@ -64,10 +64,36 @@ public class MainMenu extends JFrame {
 			}
 		});
 		
+		JLabel lblNewLabel_2_1 = new JLabel("");
+		lblNewLabel_2_1.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+			}
+		});
+		
+		JLabel lblNewLabel_2_2 = new JLabel("");
+		lblNewLabel_2_2.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				Instructions how = new Instructions();
+				how.setVisible(true);
+				dispose();
+			}
+			
+			
+		});
+		lblNewLabel_2_2.setIcon(new ImageIcon(MainMenu.class.getResource("/images/howtoplay.png")));
+		lblNewLabel_2_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2_2.setBounds(235, 399, 517, 73);
+		contentPane.add(lblNewLabel_2_2);
+		lblNewLabel_2_1.setIcon(new ImageIcon(MainMenu.class.getResource("/images/text-1732764626862.png")));
+		lblNewLabel_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2_1.setBounds(235, 481, 517, 73);
+		contentPane.add(lblNewLabel_2_1);
+		
 		
 		lblNewLabel_2.setIcon(new ImageIcon(MainMenu.class.getResource("/images/PLAY_BTN.png")));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(246, 402, 517, 73);
+		lblNewLabel_2.setBounds(235, 303, 517, 73);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -79,7 +105,7 @@ public class MainMenu extends JFrame {
 		lblNewLabel_1.setBounds(98, 43, 776, 116);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel = 	Aqnew JLabel("");
+		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(0, 0, 984, 661);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setIcon(new ImageIcon(MainMenu.class.getResource("/images/PACMAN_BG.png")));
